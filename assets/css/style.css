@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-color: #363062;
+  background-color: #aa767c;
   color: #fbf5f3;
   font-family: "Bungee Hairline", cursive;
   font-weight: 100;
@@ -18,6 +18,20 @@ h4,
 h5,
 h6 {
   letter-spacing: 0.3rem;
+}
+
+.links-style {
+  color: #fbf5f3;
+  text-decoration: none;
+}
+
+.links-style:hover {
+  color: #cf995f;
+  text-decoration: none;
+}
+
+.links-style:active {
+  transform: scale(1.12);
 }
 
 /* Landing section */
@@ -624,18 +638,10 @@ h6 {
   max-width: max-content;
 }
 
-.links-style {
-  color: #fbf5f3;
+footer .links-style:hover {
+  color: #4d4c7d;
   text-decoration: none;
-}
-
-.links-style:hover {
-  color: #cf995f;
-  text-decoration: none;
-}
-
-.links-style:active {
-  transform: scale(1.12);
+  transform: scale(1.1);
 }
 
 .icon-links {
