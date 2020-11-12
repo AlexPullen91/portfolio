@@ -20,6 +20,20 @@ h6 {
   letter-spacing: 0.3rem;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  max-width: max-content;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.safari-warning {
+  font-family: "Source Code Pro", monospace;
+}
+
 .links-style {
   color: #fbf5f3;
   text-decoration: none;
@@ -36,12 +50,20 @@ h6 {
 
 /* Landing section */
 
-.pabsolute {
-  position: absolute;
+.gradient-bg {
+  height: 170vh;
+  overflow: hidden;
+  background: rgb(216, 185, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(216, 185, 195, 1) 10%,
+    rgba(130, 115, 151, 1) 30%,
+    rgba(77, 76, 125, 1) 55%,
+    rgba(54, 48, 98, 1) 80%
+  );
 }
 
 .scroll-arrow {
-  position: absolute;
   color: #fbf5f3;
   z-index: 2;
   padding-top: 18%;
@@ -424,7 +446,7 @@ h6 {
   width: 3%;
   height: auto;
   animation: sputnik-path 15s linear alternate infinite,
-    spin 10s linear infinite;
+    spin 7s linear infinite;
 }
 
 @keyframes sputnik-path {
@@ -457,19 +479,6 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.gradient-bg {
-  height: 170vh;
-  overflow: hidden;
-  background: rgb(216, 185, 195);
-  background: linear-gradient(
-    0deg,
-    rgba(216, 185, 195, 1) 10%,
-    rgba(130, 115, 151, 1) 30%,
-    rgba(77, 76, 125, 1) 55%,
-    rgba(54, 48, 98, 1) 80%
-  );
 }
 
 /* About section */
@@ -614,10 +623,6 @@ h6 {
   background-color: #63474d;
 }
 
-.old-rose-bg {
-  background-color: #aa767c;
-}
-
 /* Footer section */
 
 .contact-header {
@@ -626,16 +631,9 @@ h6 {
 
 .footer-style {
   background-color: #aa767c;
-  height: 50vh;
-  padding: 7.5% 14%;
+  padding: 7.5% 14% 1%;
   font-size: 0.8rem;
   font-family: "Source Code Pro", monospace;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  max-width: max-content;
 }
 
 footer .links-style:hover {
@@ -646,7 +644,7 @@ footer .links-style:hover {
 
 .icon-links {
   font-size: 0.6rem;
-  margin-top: 10%;
+  margin-top: 7.5%;
 }
 
 /* Bootstrap navbar generator  */
@@ -655,6 +653,37 @@ footer .links-style:hover {
 .drop-down-menu {
   font-size: 2rem;
   color: #fbf5f3;
+}
+
+.drop-down-menu-90 {
+  transform: rotate(90deg);
+  -webkit-transition:0.2s;
+  -moz-transition:0.2s;
+  -ms-transition:0.2s;
+  -o-transition:0.2s;
+  transition:0.2s;
+}
+
+.drop-down-menu-0 {
+  transform: rotate(0deg);
+  -webkit-transition:0.2s;
+  -moz-transition:0.2s;
+  -ms-transition:0.2s;
+  -o-transition:0.2s;
+  transition:0.2s;
+}
+
+.rotate-90 {
+  animation: rotate-90 0.5s linear;
+}
+
+@keyframes rotate-90 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform:rotate(90deg)
+  }
 }
 
 .navbar-toggler {
