@@ -51,7 +51,7 @@ h6 {
 /* Landing section */
 
 .gradient-bg {
-  height: 170vh;
+  height: 180vh;
   overflow: hidden;
   background: rgb(216, 185, 195);
   background: linear-gradient(
@@ -445,8 +445,7 @@ h6 {
   left: 20rem;
   width: 3%;
   height: auto;
-  animation: sputnik-path 15s linear alternate infinite,
-    spin 7s linear infinite;
+  animation: sputnik-path 15s linear alternate infinite, spin 7s linear infinite;
 }
 
 @keyframes sputnik-path {
@@ -539,6 +538,12 @@ h6 {
 @media (max-width: 375px) {
   .dying-tree {
     left: 17rem;
+  }
+}
+
+@media (max-width: 290px) {
+  .dying-tree {
+    left: 16rem;
   }
 }
 
@@ -657,20 +662,20 @@ footer .links-style:hover {
 
 .drop-down-menu-90 {
   transform: rotate(90deg);
-  -webkit-transition:0.2s;
-  -moz-transition:0.2s;
-  -ms-transition:0.2s;
-  -o-transition:0.2s;
-  transition:0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .drop-down-menu-0 {
   transform: rotate(0deg);
-  -webkit-transition:0.2s;
-  -moz-transition:0.2s;
-  -ms-transition:0.2s;
-  -o-transition:0.2s;
-  transition:0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .rotate-90 {
@@ -682,7 +687,7 @@ footer .links-style:hover {
     transform: rotate(0deg);
   }
   100% {
-    transform:rotate(90deg)
+    transform: rotate(90deg);
   }
 }
 

@@ -31,7 +31,6 @@ let operaAgent =
 if ((chromeAgent) && (operaAgent))
     chromeAgent = false;
 
-
 /**
  * If user is using safari then display a message advising 
  * to use other browsers for best experience.
@@ -40,13 +39,14 @@ if (safariAgent) {
     document.querySelector(".safari-warning").classList.remove('d-none');
 }
 
-
-$(".navbar-toggler").click(function () {
+$(".navbar-toggler").click(function (event) {
     /**
      * Spin the hamburger menu 90 degrees on click
      */
-    $(this).toggleClass("drop-down-menu-90 drop-down-menu-0");
-});
+    if (!event.detail || event.detail == 1) {// prevent double click
+        $(this).toggleClass("drop-down-menu-90 drop-down-menu-0");
+    }
+})
 
 $(function () {
     /**
@@ -58,4 +58,20 @@ $(function () {
         navMain.collapse('hide');
         $(".navbar-toggler").toggleClass("drop-down-menu-90 drop-down-menu-0");
     });
+});
+
+$(document).click(event => {
+    /**
+     * Close nav menu when clicking elsewhere on the page
+     */
+    const isNavbarOpened = $("#hamburgerDropdown.navbar-collapse").hasClass("collapse show");
+
+    if (isNavbarOpened) {
+        const clickedElement = $(event.target);
+        const clickedInsideNavbar = clickedElement.closest('nav.navbar').length > 0;
+
+        if (!clickedInsideNavbar) {
+            $("button.navbar-toggler").click();
+        }
+    }
 });
