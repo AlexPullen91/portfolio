@@ -9,6 +9,7 @@ body {
   color: #fbf5f3;
   font-family: "Bungee Hairline", cursive;
   font-weight: 100;
+  overflow-x: hidden;
 }
 
 h1,
